@@ -120,7 +120,6 @@
     <Compile Include="Simulations\Formation\TwoPredatorFormationOnHerdSimulation.cs" />
     <Compile Include="Simulations\Formation\FormationChromosome.cs" />
     <Compile Include="Simulations\Formation\TwoPredatorFormationSimulation.cs" />
-    <Compile Include="Simulations\Full\LionVisualiser.cs" />
     <Compile Include="Simulations\PreyChoice\TwoPredatorPreyChoiceSimulation.cs" />
     <Compile Include="Simulations\PreyChoice\PreyChoiceChromosome.cs" />
     <Compile Include="Simulations\PreyChoice\SinglePredatorPreyChoiceSimulation.cs" />
@@ -131,18 +130,10 @@
     <Compile Include="Simulations\Tests\BinaryTestSubChromosome.cs" />
     <Compile Include="StatisticsTable.cs" />
     <Compile Include="Simulations\Entities\Target.cs" />
-    <Compile Include="Simulations\Behaviour\TrendCalculator.cs" />
     <Compile Include="Simulations\Entities\Zebra.cs" />
     <Compile Include="Simulations\Entities\Wildebeest.cs" />
     <Compile Include="Simulations\Entities\Gazelle.cs" />
-    <Compile Include="Simulations\Entities\Lion.cs" />
-    <Compile Include="Simulations\Full\LionSimulation.cs" />
     <Compile Include="Simulations\Entities\Entity.cs" />
-    <Compile Include="Simulations\Behaviour\Trend.cs" />
-    <Compile Include="Simulations\Behaviour\DeadTargetTrendSet.cs" />
-    <Compile Include="Simulations\Full\LionChromosome.cs" />
-    <Compile Include="Simulations\Behaviour\LiveTargetTrendSet.cs" />
-    <Compile Include="Simulations\Behaviour\TargetTrendSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

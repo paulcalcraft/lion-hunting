@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using LionHunting.Simulations.Behaviour;
 using LionHunting.Utility;
 
 namespace LionHunting.Simulations.Entities
