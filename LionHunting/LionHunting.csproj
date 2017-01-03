@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C0364A7-560C-449F-A06D-26BAD4CD084D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LionHunting</RootNamespace>
+    <AssemblyName>LionHunting</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="GUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewFileDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GUI.xaml.cs">
+      <DependentUpon>GUI.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NewFileDialog.xaml.cs">
+      <DependentUpon>NewFileDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Simulations\Common\CommonCatchSimulationBase.cs" />
+    <Compile Include="Simulations\Common\CommonLion.cs" />
+    <Compile Include="Simulations\Common\CommonSimulationBase.cs" />
+    <Compile Include="Simulations\Common\CommonVisualiser.cs" />
+    <Compile Include="Simulations\Common\CommonVisualiserBase.cs" />
+    <Compile Include="Simulations\Common\MovingPrey.cs" />
+    <Compile Include="Simulations\Common\Species.cs" />
+    <Compile Include="Simulations\Common\Unit.cs" />
+    <Compile Include="Simulations\CommunalHunting\ModelVerification\OneOnOneChase.cs" />
+    <Compile Include="Simulations\CommunalHunting\PredatorGroups\TwoOnOneFormationChase.cs" />
+    <Compile Include="Simulations\CommunalHunting\PredatorGroups\TwoOnOneFormationChromosome.cs" />
+    <Compile Include="Simulations\Entities\AnimateEntity.cs" />
+    <Compile Include="Simulations\Formation\FormationOnHerdChromosome.cs" />
+    <Compile Include="Simulations\Formation\TwoPredatorFormationOnHerdSimulation.cs" />
+    <Compile Include="Simulations\Formation\FormationChromosome.cs" />
+    <Compile Include="Simulations\Formation\TwoPredatorFormationSimulation.cs" />
+    <Compile Include="Simulations\Full\LionVisualiser.cs" />
+    <Compile Include="Simulations\PreyChoice\TwoPredatorPreyChoiceSimulation.cs" />
+    <Compile Include="Simulations\PreyChoice\PreyChoiceChromosome.cs" />
+    <Compile Include="Simulations\PreyChoice\SinglePredatorPreyChoiceSimulation.cs" />
+    <Compile Include="Simulations\PreyHerding\SinglePredator\OneOnFourChase.cs" />
+    <Compile Include="Simulations\PreyHerding\SinglePredator\OneOnFourChromosome.cs" />
+    <Compile Include="Simulations\Tests\BinaryTestChromosome.cs" />
+    <Compile Include="Simulations\Tests\BinaryTestEvolver.cs" />
+    <Compile Include="Simulations\Tests\BinaryTestSubChromosome.cs" />
+    <Compile Include="StatisticsTable.cs" />
+    <Compile Include="Simulations\Entities\Target.cs" />
+    <Compile Include="Simulations\Behaviour\TrendCalculator.cs" />
+    <Compile Include="Simulations\Entities\Zebra.cs" />
+    <Compile Include="Simulations\Entities\Wildebeest.cs" />
+    <Compile Include="Simulations\Entities\Gazelle.cs" />
+    <Compile Include="Simulations\Entities\Lion.cs" />
+    <Compile Include="Simulations\Full\LionSimulation.cs" />
+    <Compile Include="Simulations\Entities\Entity.cs" />
+    <Compile Include="Simulations\Behaviour\Trend.cs" />
+    <Compile Include="Simulations\Behaviour\DeadTargetTrendSet.cs" />
+    <Compile Include="Simulations\Full\LionChromosome.cs" />
+    <Compile Include="Simulations\Behaviour\LiveTargetTrendSet.cs" />
+    <Compile Include="Simulations\Behaviour\TargetTrendSet.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Utility\Vector2.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GeneticAlgorithms\GeneticAlgorithms.csproj">
+      <Project>{D6E1F873-677C-4555-BB70-FB340B8E89A1}</Project>
+      <Name>GeneticAlgorithms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
