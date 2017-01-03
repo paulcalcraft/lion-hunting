@@ -179,5 +179,18 @@ namespace LionHunting.Utility
         {
             return this - source;
         }
+
+        public static double NormalisedRelativeAngle(Vector2 a, Vector2 b)
+        {
+            var angle = SafeAcos(b.Normalise().Dot(a.Normalise()));
+            return 2 * (0.5d - Math.Abs(0.5d - angle / (2d * Math.PI)));
+        }
+
+        private static double SafeAcos(double d)
+        {
+            var result = Math.Acos(Math.Min(1, Math.Max(-1, d)));
+            Debug.Assert(!Double.IsNaN(result));
+            return result;
+        }
     }
 }

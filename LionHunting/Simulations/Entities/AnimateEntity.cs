@@ -41,7 +41,7 @@ namespace LionHunting.Simulations.Entities
         private Vector2 CreateAccelerationVector()
         {
             var idealAccelerationVector = IntendedVelocity - Velocity;
-            var normalisedRelativeAngle = TargetTrendSet.NormalisedRelativeAngle(IntendedVelocity, Velocity);
+            var normalisedRelativeAngle = Vector2.NormalisedRelativeAngle(IntendedVelocity, Velocity);
             var agilityBoost = 1+normalisedRelativeAngle*Agility;
             Debug.Assert(!Double.IsNaN(agilityBoost));
             var idealAcceleration = idealAccelerationVector.Magnitude();
