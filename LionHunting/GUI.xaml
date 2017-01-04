@@ -1,7 +1,7 @@
 ﻿<Window x:Class="LionHunting.GUI"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="GUI" Height="700" Width="828">
+    Title="Evolution Simulator - Lion Hunting" Height="700" Width="828">
     <Window.CommandBindings>
         <CommandBinding Command="ApplicationCommands.New" Executed="NewCommand_Execute" />
         <CommandBinding Command="ApplicationCommands.Open" Executed="OpenCommand_Execute" />
